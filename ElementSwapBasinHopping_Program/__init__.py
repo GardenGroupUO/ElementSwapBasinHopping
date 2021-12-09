@@ -148,7 +148,7 @@ __license__ = 'GNU AFFERO GENERAL PUBLIC LICENSE'
 __url__ = 'https://github.com/GardenGroupUO'
 __doc__ = 'None'
 
-from ElementSwapBasinHopping_Program.Element_Swap_Basin_Hopping_Main import Element_Swap_Basin_Hopping_Main
-__all__ = ['Element_Swap_Basin_Hopping_Main']
+from ElementSwapBasinHopping_Program.ElementSwapBasinHopping_Main import ElementSwapBasinHopping_Main
+__all__ = ['ElementSwapBasinHopping_Main']
 
 # ------------------------------------------------------------------------------------------------------------------------
