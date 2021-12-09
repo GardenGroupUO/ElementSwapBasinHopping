@@ -65,22 +65,20 @@ The input files required for this program are:
 
 ASE based variables (See https://wiki.fysik.dtu.dk/ase/ase/optimize.html?highlight=basin%20hopping#module-ase.optimize.basin)
 
-``input_name``: This is the file that contains the cluster that you want to perform the element swap basin hopping algorithm upon.
-``output_name``: This is the name of the lowest energy cluster that is obtained after performing the element swap basin hopping algorithm upon.
-``calculator``: This is the calculator that is used. This indicates the energy and force on the cluster during local optimisations.
-``max_no_to_steps``: This is the number of basin hopping steps to perform.
-``temperature``: This is the temperature of the system.
-``fmax``: This is the convergence criteria for your local optimiser
+* ``input_name``: This is the file that contains the cluster that you want to perform the element swap basin hopping algorithm upon.
+* ``output_name``: This is the name of the lowest energy cluster that is obtained after performing the element swap basin hopping algorithm upon.
+* ``calculator``: This is the calculator that is used. This indicates the energy and force on the cluster during local optimisations.
+* ``max_no_to_steps``: This is the number of basin hopping steps to perform.
+* ``temperature``: This is the temperature of the system.
+* ``fmax``: This is the convergence criteria for your local optimiser
 
 Custom variables
 
-``start_recording_step``: Only structures obtained by the ESBh algoritm will be recorded to ``recorded_local_minima.traj`` after this step.
-``step_recording_interval``: Only structures will be recorded to ``recorded_local_minima.traj`` if ``((step - start_recording_step) % step_recording_interval == 0)`` (``%`` is modulus in python, see https://www.freecodecamp.org/news/the-python-modulo-operator-what-does-the-symbol-mean-in-python-solved/#:~:text=The%20%25%20symbol%20in%20Python%20is,%2C%20*%20%2C%20**%20%2C%20%2F%2F%20.)
+* ``start_recording_step``: Only structures obtained by the ESBh algoritm will be recorded to ``recorded_local_minima.traj`` after this step.
+* ``step_recording_interval``: Only structures will be recorded to ``recorded_local_minima.traj`` if ``((step - start_recording_step) % step_recording_interval == 0)`` (``%`` is modulus in python, see https://www.freecodecamp.org/news/the-python-modulo-operator-what-does-the-symbol-mean-in-python-solved/#:~:text=The%20%25%20symbol%20in%20Python%20is,%2C%20*%20%2C%20**%20%2C%20%2F%2F%20.)
 
-``verbose``: Print debugging information about the simulation.
-``print_interval``: print which step is being perform, where steps are printed after each step interval given by this parameter.
-
-
+* ``verbose``: Print debugging information about the simulation.
+* ``print_interval``: print which step is being perform, where steps are printed after each step interval given by this parameter.
 
 An example of the script used to run this program is given below, called ``Run_ESBH.py``.
 
