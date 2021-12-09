@@ -57,10 +57,6 @@ This will allow your computer to run this program through your terminal on pytho
 
 ## How to Run ElementSwapBasinHopping
 
-
-
-As well as this script, you also need the cluster that you wish to perform the element swapping basin hopping algorithm, and give it's name to the ``input_name`` variable. For example, in th escript below, this file is called ``cluster.xyz``, and ``input_name = 'cluster.xyz'`` in the script. 
-
 The input files required for this program are:
 
 ASE based variables (See https://wiki.fysik.dtu.dk/ase/ase/optimize.html?highlight=basin%20hopping#module-ase.optimize.basin)
