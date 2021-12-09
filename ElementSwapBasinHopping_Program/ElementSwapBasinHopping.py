@@ -45,7 +45,7 @@ class ElementSwapBasinHopping(BasinHopping):
 		self.recorded_steps_data_filename = 'steps_recorded_into_'+local_minima_trajectory.replace('.','_')+'.txt'
 		if os.path.exists(self.recorded_steps_data_filename):
 			os.remove(self.recorded_steps_data_filename)
-		self.recorded_steps_counter = 0
+		self.recorded_steps_counter = 1
 		with open(self.recorded_steps_data_filename,'w') as step_recorded_dataTXT:
 			step_recorded_dataTXT.write('Image in traj file: Step\n')
 
