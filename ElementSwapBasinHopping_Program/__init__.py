@@ -1,7 +1,7 @@
 # The information about the Organisms program
 
 __name__    = 'ElementSwapBasinHopping'
-__version__ = '1.4'
+__version__ = '1.5'
 __author__  = 'Dr. Geoffrey Weal and Dr. Anna Garden'
 
 import sys
