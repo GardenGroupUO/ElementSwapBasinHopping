@@ -57,9 +57,32 @@ This will allow your computer to run this program through your terminal on pytho
 
 ## How to Run ElementSwapBasinHopping
 
-An example of the script used to run this program is given below, called ``Run_ESBH.py``.
 
-As well as this script, you also need the cluster that you wish to perform the element swapping basin hopping algorithm, and give it's name to the ``input_name`` variable. For example, in th escript below, this file is called ``cluster.xyz``, and ``input_name = 'cluster.xyz'`` in the script,
+
+As well as this script, you also need the cluster that you wish to perform the element swapping basin hopping algorithm, and give it's name to the ``input_name`` variable. For example, in th escript below, this file is called ``cluster.xyz``, and ``input_name = 'cluster.xyz'`` in the script. 
+
+The input files required for this program are:
+
+ASE based variables (See https://wiki.fysik.dtu.dk/ase/ase/optimize.html?highlight=basin%20hopping#module-ase.optimize.basin)
+
+``input_name``: This is the file that contains the cluster that you want to perform the element swap basin hopping algorithm upon.
+``output_name``: This is the name of the lowest energy cluster that is obtained after performing the element swap basin hopping algorithm upon.
+``calculator``: This is the calculator that is used. This indicates the energy and force on the cluster during local optimisations.
+``max_no_to_steps``: This is the number of basin hopping steps to perform.
+``temperature``: This is the temperature of the system.
+``fmax``: This is the convergence criteria for your local optimiser
+
+Custom variables
+
+``start_recording_step``: Only structures obtained by the ESBh algoritm will be recorded to ``recorded_local_minima.traj`` after this step.
+``step_recording_interval``: Only structures will be recorded to ``recorded_local_minima.traj`` if ``((step - start_recording_step) % step_recording_interval == 0)`` (``%`` is modulus in python, see https://www.freecodecamp.org/news/the-python-modulo-operator-what-does-the-symbol-mean-in-python-solved/#:~:text=The%20%25%20symbol%20in%20Python%20is,%2C%20*%20%2C%20**%20%2C%20%2F%2F%20.)
+
+``verbose``: Print debugging information about the simulation.
+``print_interval``: print which step is being perform, where steps are printed after each step interval given by this parameter.
+
+
+
+An example of the script used to run this program is given below, called ``Run_ESBH.py``.
 
 ```python
 from asap3.Internal.BuiltinPotentials import Gupta
@@ -69,6 +92,7 @@ import ase.units as units
 input_name = 'cluster.xyz'
 output_name = 'output_cluster.xyz'
 max_no_to_steps = 30000
+temperature = 500*units.kB
 fmax = 0.1
 
 start_recording_step = 15000
@@ -81,7 +105,7 @@ print_interval=1000
 Gupta_parameters = {'Cu': [10.960,2.278,0.0855,1.224,2.556],'Pd': [10.867,3.742,0.1746,1.718,2.7485],('Cu','Pd'): [10.9135,3.01,0.13005,1.471,2.65225]} ##Cleri
 calculator = Gupta(Gupta_parameters, cutoff=2.236, debug=True) ##Cleri
 
-ElementSwapBasinHopping_Main(input_name,output_name,calculator,max_no_to_steps,temperature=500*units.kB,fmax=fmax,start_recording_step=start_recording_step,step_recording_interval=step_recording_interval,verbose=verbose,print_interval=print_interval)
+ElementSwapBasinHopping_Main(input_name,output_name,calculator,max_no_to_steps,temperature=temperature,fmax=fmax,start_recording_step=start_recording_step,step_recording_interval=step_recording_interval,verbose=verbose,print_interval=print_interval)
 ```
 
 ## What will ElementSwapBasinHopping do when you run the ``Run_ESBH.py`` script?
