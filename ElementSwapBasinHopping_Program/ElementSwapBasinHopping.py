@@ -47,7 +47,7 @@ class ElementSwapBasinHopping(BasinHopping):
 			os.remove(self.recorded_steps_data_filename)
 		self.recorded_steps_counter = 1
 		with open(self.recorded_steps_data_filename,'w') as step_recorded_dataTXT:
-			step_recorded_dataTXT.write('Image in traj file: Step\n')
+			step_recorded_dataTXT.write('Image no in traj file starting at 1 (starting at 0): Step\n')
 
 		'''
 		self.kT = temperature
@@ -185,7 +185,7 @@ class ElementSwapBasinHopping(BasinHopping):
 				if (step >= self.start_recording_step) and ((step - self.start_recording_step) % self.step_recording_interval == 0):
 					self.lm_trajectory.write(self.atoms)
 					with open(self.recorded_steps_data_filename,'a') as step_recorded_dataTXT:
-						step_recorded_dataTXT.write(str(self.recorded_steps_counter)+': '+str(step)+'\n')
+						step_recorded_dataTXT.write(str(self.recorded_steps_counter)+'(@'+str(self.recorded_steps_counter-1)+') : '+str(step)+'\n')
 						self.recorded_steps_counter += 1
 					if self.verbose:
 						if step == self.start_recording_step:
