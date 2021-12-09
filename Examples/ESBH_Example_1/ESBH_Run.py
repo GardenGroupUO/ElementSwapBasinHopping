@@ -1,6 +1,6 @@
 
 from asap3.Internal.BuiltinPotentials import Gupta
-from ESBH_Program.ElementSwapBasinHopping_Main import ElementSwapBasinHopping_Main
+from ElementSwapBasinHopping_Program.ElementSwapBasinHopping_Main import ElementSwapBasinHopping_Main
 
 input_name = 'example.xyz'
 output_name = 'output_example.xyz'

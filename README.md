@@ -63,7 +63,7 @@ As well as this script, you also need the cluster that you wish to perform the e
 
 ```python
 from asap3.Internal.BuiltinPotentials import Gupta
-from ESBH_Program.ElementSwapBasinHopping_Main import ElementSwapBasinHopping_Main
+from ElementSwapBasinHopping_Program.ElementSwapBasinHopping_Main import ElementSwapBasinHopping_Main
 import ase.units as units
 
 input_name = 'cluster.xyz'

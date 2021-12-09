@@ -1,6 +1,6 @@
 
 from asap3.Internal.BuiltinPotentials import Gupta
-from ESBH_Program.ElementSwapBasinHopping_Main import ElementSwapBasinHopping_Main
+from ElementSwapBasinHopping_Program.ElementSwapBasinHopping_Main import ElementSwapBasinHopping_Main
 
 #import os
 #os.remove('global_optimisation_output.txt')
