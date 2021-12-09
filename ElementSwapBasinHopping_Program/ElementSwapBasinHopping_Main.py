@@ -1,7 +1,7 @@
 from ase.io import read as ase_read
 from ase.io import write as ase_write
 from ase.optimize.fire import FIRE
-from ESBH_Program.ElementSwapBasinHopping import ElementSwapBasinHopping
+from ElementSwapBasinHopping_Program.ElementSwapBasinHopping import ElementSwapBasinHopping
 
 class ElementSwapBasinHopping_Main:
 
