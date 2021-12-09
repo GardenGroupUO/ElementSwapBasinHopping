@@ -1,0 +1,16 @@
+Installation
+------------
+
+To use, place into your ~/.bashrc:
+
+###################################
+########## Basin Hopping ##########
+export PATH_TO_BH="<path-to-BasinHopping_v-folder>"
+
+export PYTHONPATH="$PATH_TO_BH":$PYTHONPATH
+
+###################################
+
+For information how to use this, look at:
+
+https://wiki.fysik.dtu.dk/ase/ase/optimize.html#module-ase.optimize.basin
